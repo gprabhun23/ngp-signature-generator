@@ -15,7 +15,7 @@ Table of contents
 - [x] Show the options based on settings.
 - [x] Allow to specify image height and width.
 - [x] Image will be received as base64 string.
-- [x] Accessibility.
+- [x] Allow to specify any type of font-family (Google fonts or any other).
 
 ## Getting started
 ### Step 1: Install `ngp-signature-generator`:
@@ -37,6 +37,18 @@ export class AppModule {}
 ```
 ### Usage sample
 
+Import cursive hand writing type fonts to index.html file :
+
+```html
+
+<link href="https://fonts.googleapis.com/css?family=Cedarville Cursive&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kristi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Grand Hotel&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mrs Saint Delafield&display=swap" rel="stylesheet">
+
+```
+
 ```html
 <app-signature-generator
 [Text]="SignatureText"
@@ -51,6 +63,8 @@ export class AppModule {}
 <button class="ngp-mcq-mybutton" (click)="generateSignatures()">Generate</button>
 
 ```
+
+
 ```javascript
 
 constructor() {
