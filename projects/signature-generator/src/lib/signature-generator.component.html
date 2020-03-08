@@ -1,0 +1,12 @@
+<canvas #canvasEl [width]='imageWidth' [height]='imageHeight' style="display: none;"></canvas>
+<div class="fade" *ngIf="DataSource.length > 1">
+  <label class="ngp-rd-container" *ngFor="let item of DataSource; index as i">
+    <span [ngStyle]="applyStyles(item)">{{ SignatureText }}</span>
+    <input type="radio" name="sign" [value]="i" (change)="onSignatureSelection(item)" />
+    <span class="ngp-checkmark"></span>
+  </label>
+</div>
+<div *ngIf="ShowSignature">
+  <img [src]='base64Image' *ngIf="base64Image" style="border:1px solid black" [width]='imageWidth'
+    [height]='imageHeight'>
+</div>
